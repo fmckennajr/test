@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<triggers class="com.linoma.dpa.commandcenter.codec.TriggerVOListCodec">
+	<trigger>
+		<service>8</service>
+		<name>CHANGEME</name>
+		<status>I</status>
+		<domain>Default</domain>
+		<description></description>
+		<eventTypeID>122</eventTypeID>
+		<stopProcessing>false</stopProcessing>
+		<action>
+			<type>6</type>
+			<xml>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;callLocalProject jobName=&quot;CHANGEME&quot; mode=&quot;batch&quot; password=&quot;caecert:dHnQ+x8rjxAPBxNn/B6Ln44WPTo82pWKGyuJnqH0I2M=&quot; passwordIsEncrypted=&quot;true&quot; priority=&quot;1&quot; project=&quot;/trigger-copy-to-linux-instances-with-failover-final-finaler&quot; jobQueueName=&quot;Default&quot; user=&quot;mftadmin&quot;&gt;
+	&lt;variable name=&quot;file&quot; value=&quot;${event.physicalPath}&quot; /&gt;
+	&lt;variable name=&quot;folder&quot; value=&quot;${event.physicalFolder}&quot; /&gt;
+	&lt;variable name=&quot;hostList&quot; value=&quot;CHANGEME&quot; /&gt;
+	&lt;variable name=&quot;path&quot; value=&quot;CHANGEME&quot; /&gt;
+	&lt;variable name=&quot;fileName&quot; value=&quot;${event.fileName}&quot; /&gt;
+&lt;/callLocalProject&gt;
+</xml>
+		</action>
+		<conditions>
+			<condition>
+				<operand>A</operand>
+				<value>CHANGEME</value>
+				<attributeId>100</attributeId>
+				<openParen></openParen>
+				<closeParen></closeParen>
+				<expressionId>100</expressionId>
+			</condition>
+			<condition>
+				<operand></operand>
+				<value>CHANGEME</value>
+				<attributeId>110</attributeId>
+				<openParen></openParen>
+				<closeParen></closeParen>
+				<expressionId>108</expressionId>
+			</condition>
+		</conditions>
+	</trigger>
+</triggers>
